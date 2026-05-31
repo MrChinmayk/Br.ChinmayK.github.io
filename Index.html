@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chinmay Khedkar — Neurospiritual Guidance</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cinzel:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8D5A0;
+    --gold-dim: #7A5F2A;
+    --deep: #0A0A12;
+    --deep2: #0F0F1E;
+    --deep3: #141428;
+    --violet: #2A1F4E;
+    --violet-mid: #3D2E72;
+    --cream: #F5EDD8;
+    --cream-dim: #D4C8A8;
+    --text-body: #C8BEA8;
+    --accent-rose: #C87BA0;
+    --accent-teal: #5BBFB5;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--deep);
+    color: var(--text-body);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    line-height: 1.75;
+    overflow-x: hidden;
+  }
+
+  /* ── Stars background ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 12% 18%, rgba(201,168,76,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 78% 8%, rgba(201,168,76,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 34% 55%, rgba(255,255,255,0.2) 0%, transparent 100%),
+      radial-gradient(1px 1px at 90% 42%, rgba(201,168,76,0.25) 0%, transparent 100%),
+      radial-gradient(1px 1px at 55% 85%, rgba(255,255,255,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 5% 72%, rgba(201,168,76,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 67% 30%, rgba(255,255,255,0.2) 0%, transparent 100%),
+      radial-gradient(1px 1px at 22% 90%, rgba(201,168,76,0.2) 0%, transparent 100%),
+      radial-gradient(1px 1px at 48% 12%, rgba(255,255,255,0.25) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .page {
+    position: relative;
+    z-index: 1;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 60px 40px 80px;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    text-align: center;
+    padding: 60px 20px 50px;
+    position: relative;
+  }
+
+  .om-symbol {
+    font-size: 52px;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 18px;
+    animation: glow-pulse 4s ease-in-out infinite;
+    text-shadow: 0 0 30px rgba(201,168,76,0.6), 0 0 60px rgba(201,168,76,0.3);
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% { text-shadow: 0 0 30px rgba(201,168,76,0.6), 0 0 60px rgba(201,168,76,0.3); }
+    50% { text-shadow: 0 0 50px rgba(201,168,76,0.9), 0 0 100px rgba(201,168,76,0.5), 0 0 140px rgba(201,168,76,0.2); }
+  }
+
+  .header-name {
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 6px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .header-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 46px;
+    font-weight: 300;
+    color: var(--cream);
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+
+  .header-title em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .header-sub {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    margin-top: 16px;
+  }
+
+  /* ── Divider ── */
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 40px 0;
+  }
+
+  .divider-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
+  }
+
+  .divider-gem {
+    width: 8px;
+    height: 8px;
+    background: var(--gold);
+    transform: rotate(45deg);
+    box-shadow: 0 0 10px rgba(201,168,76,0.5);
+  }
+
+  /* ── INTRO CARD ── */
+  .intro-card {
+    background: linear-gradient(135deg, rgba(42,31,78,0.6), rgba(20,20,40,0.8));
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 2px;
+    padding: 40px 44px;
+    margin-bottom: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .intro-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  .intro-card p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    font-weight: 400;
+    color: var(--cream-dim);
+    line-height: 1.85;
+    text-align: center;
+  }
+
+  .intro-card p strong {
+    color: var(--gold-light);
+    font-weight: 500;
+  }
+
+  /* ── SECTION TITLE ── */
+  .section-label {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 5px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .section-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--cream);
+    margin-bottom: 28px;
+    line-height: 1.3;
+  }
+
+  /* ── MODALITIES GRID ── */
+  .modalities-section {
+    margin: 44px 0;
+  }
+
+  .modalities-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .modality-card {
+    background: rgba(15,15,30,0.8);
+    border: 1px solid rgba(201,168,76,0.12);
+    border-left: 2px solid var(--gold-dim);
+    padding: 18px 22px;
+    transition: border-color 0.3s, background 0.3s;
+  }
+
+  .modality-card:hover {
+    border-left-color: var(--gold);
+    background: rgba(42,31,78,0.4);
+  }
+
+  .modality-icon {
+    font-size: 20px;
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  .modality-name {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .modality-desc {
+    font-size: 12.5px;
+    color: var(--text-body);
+    line-height: 1.6;
+  }
+
+  /* ── PROCESS SECTION ── */
+  .process-section {
+    margin: 44px 0;
+  }
+
+  .steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .step {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(201,168,76,0.08);
+    position: relative;
+  }
+
+  .step:last-child { border-bottom: none; }
+
+  .step-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 300;
+    color: rgba(201,168,76,0.2);
+    line-height: 1;
+    min-width: 48px;
+    text-align: right;
+  }
+
+  .step-content {}
+
+  .step-title {
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .step-text {
+    font-size: 14px;
+    color: var(--text-body);
+    line-height: 1.7;
+  }
+
+  /* ── SEVA SECTION ── */
+  .seva-box {
+    background: linear-gradient(135deg, rgba(201,168,76,0.08), rgba(42,31,78,0.5));
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 2px;
+    padding: 36px 44px;
+    text-align: center;
+    margin: 44px 0;
+    position: relative;
+  }
+
+  .seva-box::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  .seva-rupee {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 56px;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 8px;
+    text-shadow: 0 0 30px rgba(201,168,76,0.4);
+  }
+
+  .seva-label {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 5px;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .seva-desc {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    color: var(--cream-dim);
+    line-height: 1.8;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  /* ── INFO REQUEST SECTION ── */
+  .info-section {
+    margin: 44px 0;
+  }
+
+  .info-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-top: 8px;
+  }
+
+  .info-col-title {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+  }
+
+  .info-list {
+    list-style: none;
+  }
+
+  .info-list li {
+    font-size: 13.5px;
+    color: var(--text-body);
+    padding: 6px 0;
+    padding-left: 16px;
+    position: relative;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+
+  .info-list li::before {
+    content: '◆';
+    position: absolute;
+    left: 0;
+    font-size: 6px;
+    color: var(--gold);
+    top: 10px;
+  }
+
+  /* ── Q&A SECTION ── */
+  .qa-row {
+    display: flex;
+    gap: 16px;
+    margin: 44px 0;
+  }
+
+  .qa-card {
+    flex: 1;
+    background: rgba(15,15,30,0.6);
+    border: 1px solid rgba(201,168,76,0.1);
+    padding: 28px;
+    text-align: center;
+  }
+
+  .qa-duration {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px;
+    font-weight: 300;
+    color: var(--gold);
+    display: block;
+  }
+
+  .qa-unit {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .qa-note {
+    font-size: 12.5px;
+    color: var(--text-body);
+  }
+
+  /* ── PHILOSOPHY BANNER ── */
+  .philosophy {
+    margin: 50px 0;
+    padding: 40px;
+    background: rgba(42,31,78,0.25);
+    border-top: 1px solid rgba(201,168,76,0.2);
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+    text-align: center;
+  }
+
+  .philosophy blockquote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--gold-light);
+    line-height: 1.7;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    text-align: center;
+    padding: 40px 20px 20px;
+    border-top: 1px solid rgba(201,168,76,0.1);
+    margin-top: 60px;
+  }
+
+  .footer-name {
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .footer-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    color: var(--text-body);
+    margin-bottom: 20px;
+  }
+
+  .footer-note {
+    font-size: 11px;
+    color: var(--gold-dim);
+    letter-spacing: 1px;
+    font-style: italic;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    .page { padding: 32px 20px 60px; }
+    .header-title { font-size: 32px; }
+    .modalities-grid { grid-template-columns: 1fr; }
+    .info-columns { grid-template-columns: 1fr; }
+    .qa-row { flex-direction: column; }
+    .intro-card { padding: 28px 24px; }
+    .intro-card p { font-size: 17px; }
+  }
+
+  /* ── Print styles ── */
+  @media print {
+    body::before { display: none; }
+    .modality-card:hover { border-left-color: var(--gold-dim); background: transparent; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <span class="om-symbol">ॐ</span>
+    <div class="header-name">Chinmay Khedkar</div>
+    <h1 class="header-title">Neurospiritual<br><em>Guidance & Healing</em></h1>
+    <div class="header-sub">Rooted in Dharma &nbsp;·&nbsp; Grounded in Science &nbsp;·&nbsp; Offered as Seva</div>
+  </div>
+
+  <div class="divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line"></div></div>
+
+  <!-- INTRO -->
+  <div class="intro-card">
+    <p>
+      I offer holistic guidance that sits at the intersection of <strong>Vedic wisdom, consciousness science, and emotional healing</strong> — integrating multiple modalities intuitively, based on the unique person and situation in front of me. Every session is a sincere offering, not a transaction.
+    </p>
+  </div>
+
+  <div class="divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line"></div></div>
+
+  <!-- MODALITIES -->
+  <div class="modalities-section">
+    <span class="section-label">What I Work With</span>
+    <h2 class="section-heading">Modalities of Practice</h2>
+    <p style="font-size:13.5px; margin-bottom: 24px; color: var(--text-body);">
+      I do not follow a fixed script. I read the situation and combine these tools as the moment calls for — sometimes one, sometimes several, always with intention.
+    </p>
+
+    <div class="modalities-grid">
+      <div class="modality-card">
+        <span class="modality-icon">🪐</span>
+        <div class="modality-name">Vedic Astrology</div>
+        <div class="modality-desc">Deep Kundli analysis across multiple divisional charts, dasha systems, and karmic patterns.</div>
+      </div>
+      <div class="modality-card">
+        <span class="modality-icon">🃏</span>
+        <div class="modality-name">Oracle Guidance</div>
+        <div class="modality-desc">Intuitive card-based readings to illuminate subconscious patterns and soul-level direction.</div>
+      </div>
+      <div class="modality-card">
+        <span class="modality-icon">🙏</span>
+        <div class="modality-name">Blessings & Astral Prayer Work</div>
+        <div class="modality-desc">A sincere proposal sent to your astral and spiritual team — guides, ancestors, and higher forces — requesting that they send a gentle nudge, a sign, or a blessing your way. You have every right to that support. This is simply the act of asking on your behalf.</div>
+      </div>
+      <div class="modality-card">
+        <span class="modality-icon">✍️</span>
+        <div class="modality-name">Auto-Writing</div>
+        <div class="modality-desc">Channelled guidance through meditative writing to access higher-self messages and soul-level clarity.</div>
+      </div>
+      <div class="modality-card">
+        <span class="modality-icon">🌀</span>
+        <div class="modality-name">Chakra Healing</div>
+        <div class="modality-desc">Energy centre assessment and restoration for physical, emotional, and spiritual alignment.</div>
+      </div>
+      <div class="modality-card">
+        <span class="modality-icon">🫴</span>
+        <div class="modality-name">EFT — Tapping</div>
+        <div class="modality-desc">Emotional Freedom Technique to release stored trauma, fear, and emotional blocks from the nervous system.</div>
+      </div>
+      <div class="modality-card">
+        <span class="modality-icon">🧠</span>
+        <div class="modality-name">Subconscious Rewiring & NLP</div>
+        <div class="modality-desc">Reprogramming limiting beliefs and inherited thought patterns through neuro-linguistic and subconscious-level techniques.</div>
+      </div>
+      <div class="modality-card">
+        <span class="modality-icon">🎧</span>
+        <div class="modality-name">Theta Audio Work</div>
+        <div class="modality-desc">Frequency-based sound protocols — paired with Yoga Nidra and personalised affirmations recorded in your own voice — to induce deep healing states and neural recalibration during sleep.</div>
+      </div>
+      <div class="modality-card" style="grid-column: 1 / -1;">
+        <span class="modality-icon">🔺</span>
+        <div class="modality-name">LHF — Light Healing Frequency</div>
+        <div class="modality-desc">A frequency-based modality in which personalised geometric Yantras are designed for you — specific to your energy, intention, and chart. You are guided to visualise and integrate these sacred forms, allowing the geometry itself to work as a healing transmission at a subconscious and energetic level.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line"></div></div>
+
+  <!-- ADDITIONAL RECOMMENDATIONS -->
+  <div class="modalities-section">
+    <span class="section-label">Beyond the Session</span>
+    <h2 class="section-heading">Lifestyle Prescriptions</h2>
+    <p style="font-size:13.5px; margin-bottom: 24px; color: var(--text-body);">
+      Depending on what arises in your analysis, I may also recommend any of the following as part of your broader healing integration.
+    </p>
+
+    <div class="modalities-grid">
+
+      <div class="modality-card">
+        <span class="modality-icon">🌙</span>
+        <div class="modality-name">Yoga Nidra + Sleep Affirmations</div>
+        <div class="modality-desc">A personalised Yoga Nidra practice layered with affirmations I write specifically for you — recorded in your own voice and listened to as you fall asleep. Your subconscious receives what your conscious mind resists.</div>
+      </div>
+
+      <div class="modality-card">
+        <span class="modality-icon">💧</span>
+        <div class="modality-name">Rudraksha & Water Therapy</div>
+        <div class="modality-desc">Sacred bead and intentional water practices prescribed based on your chart and current life theme — simple, ancient, and quietly powerful when done consistently.</div>
+      </div>
+
+      <div class="modality-card" style="grid-column: 1 / -1;">
+        <span class="modality-icon">✨</span>
+        <div class="modality-name">Stillness Curation</div>
+        <div class="modality-desc">
+          A dedicated time slot each week — belonging entirely to you and to nothing else. No task to complete. No outcome to achieve. No one to impress or compete with. This is an invitation sent into your life for intuitions, miracles, and wonders to arrive.<br><br>
+          It may look like star gazing. It may be the repetitive drawing of lines or circles. Rock balancing. A slow walk with no destination. These are solo, purposeless acts — and that purposelessness is precisely the point. When we stop performing, something real begins to move.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line"></div></div>
+
+  <!-- SEVA EXCHANGE -->
+  <div class="seva-box">
+    <span class="seva-rupee">₹1</span>
+    <div class="seva-label">Energy Exchange &nbsp;·&nbsp; Pure Seva</div>
+    <p class="seva-desc">
+      At present, I offer this work as genuine service and deep personal interest. I accept ₹1 as a symbolic energy exchange — because a gift without any exchange holds a different quality of intention for both the giver and receiver. There is no fee. There is no barrier.
+    </p>
+  </div>
+
+  <div class="divider"><div class="divider-line"></div><div class="divider-gem"></div><div class="divider-line"></div></div>
+
+  <!-- PROCESS -->
+  <div class="process-section">
+    <span class="section-label">How It Works</span>
+    <h2 class="section-heading">The Process</h2>
+
+    <div class="steps-container">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-content">
+          <div class="step-title">Initial Information & Intention</div>
+          <div class="step-text">You share your birth details and a clear sense of what you are navigating — a challenge, a decision, a direction, or simply a desire for deeper clarity. Additional questions may follow depending on the modalities chosen.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-content">
+          <div class="step-title">Kundli Analysis Audio</div>
+          <div class="step-text">A thorough, in-depth audio covering key life areas: karma, dharma, relationships, career, health, and spiritual path — with the reasoning behind each observation explained clearly. Typically around one hour, or shorter by request.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-content">
+          <div class="step-title">Remedies & Recommendations Audio</div>
+          <div class="step-text">A dedicated audio with specific, practical remedies — mantras, rituals, lifestyle adjustments, and spiritual prescriptions — tailored precisely to your chart and situation.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-content">
+          <div class="step-title">Live Q&am
